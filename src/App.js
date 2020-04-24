@@ -31,6 +31,11 @@ class App extends Component {
           alt="covid-19"
           className={styles.image}
         />
+        <img
+          src={process.env.PUBLIC_URL + "/images/logo.png"}
+          alt="covid-19"
+          className={styles.image}
+        />
         <Cards data={data} />
         <CountryPicker handleSelectCountry={this.handleSelectCountry} />
         <Chart data={data} country={country} />
