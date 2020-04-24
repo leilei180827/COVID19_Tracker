@@ -11,9 +11,12 @@ const CountryPicker = (props) => {
     fetchAPI();
   }, []);
   return (
-    <FormControl>
-      <NativeSelect>
-        <option value="global">Global</option>
+    <FormControl className={styles.formControl}>
+      <NativeSelect
+        defaultValue=""
+        onChange={(event) => props.handleSelectCountry(event.target.value)}
+      >
+        <option value="">Global</option>
         {countries.map((country, index) => (
           <option key={index} value={country.name}>
             {country.name}
