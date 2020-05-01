@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Cards, Chart, CountryPicker } from "./components";
+import { Cards, Chart, CountryPicker, AuChart } from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 // import {} from ".././public/images"
@@ -33,7 +33,11 @@ class App extends Component {
         />
         <Cards data={data} />
         <CountryPicker handleSelectCountry={this.handleSelectCountry} />
-        <Chart data={data} country={country} />
+        {country === "Australia" ? (
+          <AuChart />
+        ) : (
+          <Chart data={data} country={country} />
+        )}
       </div>
     );
   }
