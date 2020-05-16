@@ -2,3 +2,4 @@
 Data about Australian covid-19 cases are from arcgis
 Others are from ""https://covid19.mathdro.id"
 The presentation is available at https://covid-19trackerleilei.herokuapp.com/
+(The idea of project is originated from "adrianhajdin/project_corona_tracker")
